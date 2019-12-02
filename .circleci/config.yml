@@ -2,10 +2,12 @@
 version: 2.1
 
 jobs:
-  run-staging:
+  build:
+    docker:
+      - image: circleci/python:latest
     steps:
       - checkout
 workflows:
   run-now:
     jobs:
-      - run-staging
+      - build
