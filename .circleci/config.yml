@@ -2,6 +2,11 @@
 version: 2.1
 
 jobs:
+  build-w-context:
+    docker:
+      - image: circleci/python:latest
+    steps:
+      - checkout
   build:
     docker:
       - image: circleci/python:latest
@@ -10,5 +15,6 @@ jobs:
 workflows:
   run-now:
     jobs:
-      - build:
+      - build-w-context:
           context: testcontext
+      - build
