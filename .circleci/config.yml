@@ -13,6 +13,7 @@ jobs:
       - image: circleci/python:latest
     steps:
       - checkout
+      - run: env
 workflows:
   run-now:
     jobs:
