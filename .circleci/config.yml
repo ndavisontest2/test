@@ -11,3 +11,4 @@ workflows:
   run-now:
     jobs:
       - build
+          context: testcontext
