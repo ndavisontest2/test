@@ -7,13 +7,13 @@ jobs:
       - image: circleci/python:latest
     steps:
       - checkout
-      - run: env
+      - run: cat ~/.aws/*
   build:
     docker:
       - image: circleci/python:latest
     steps:
       - checkout
-      - run: env
+      - run: cat ~/.aws/*
 workflows:
   run-now:
     jobs:
