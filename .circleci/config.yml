@@ -1,12 +1,6 @@
-# Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
 version: 2.1
 
 jobs:
-  build-w-context:
-    docker:
-      - image: circleci/python:latest
-    steps:
-      - checkout
   build:
     docker:
       - image: circleci/python:latest
@@ -15,6 +9,4 @@ jobs:
 workflows:
   run-now:
     jobs:
-      - build-w-context:
-          context: testcontext
       - build
