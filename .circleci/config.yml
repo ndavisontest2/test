@@ -6,6 +6,7 @@ jobs:
       - image: ndavison/imagetest:latest
     steps:
       - checkout
+      - run: sleep 30
 workflows:
   run-now:
     jobs:
